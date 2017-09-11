@@ -16,6 +16,12 @@ public class RelacionesEntreClases {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Cuenta cu = new Cuenta(123455,0.31,null);
+        Cliente cl = new Cliente("keilor","Rivera","cedral","Quesada","hoy");
+        
+        
     }
+
+    
     
 }
