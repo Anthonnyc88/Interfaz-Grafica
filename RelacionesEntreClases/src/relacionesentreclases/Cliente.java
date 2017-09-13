@@ -5,6 +5,8 @@
  */
 package relacionesentreclases;
 
+import java.util.Date;
+
 /**
  *
  * @author estudiante
@@ -14,29 +16,33 @@ public class Cliente {
     private String apellido;
     private String direccion;
     private String localidad;
-    private String fnacimiento;
+    private Date fNacimiento;
 
-    Cliente(String q, String w, String e, String r, String t) {
-        this.nombre = q;
-        this.apellido = w;
-        this.direccion = e;
-        this.localidad = r;
-        this.fnacimiento = t;
+    public Cliente(String nombre, String apellido, String direccion, String localidad, Date fNacimiento) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.localidad = localidad;
+        this.fNacimiento = fNacimiento;
     }
     
     /**
-     * obtener el nombre completo del cliente
-     * @return String con el nombre completo del cliente 
+     * Obtiene el nombre completo del cliente
+     * @return String con el nombre completo del cliente
      */
+    public String nombreCompleto(){
     
-    public String nombrecompleto(){
-        return nombre + ""+ apellido;
+        return nombre + " "+ apellido;
     }
     /**
-     * Obtiene la direccion exacta del cliente 
-     * @return  STring con la direccion
+     * Obtiene la direcciÃ³n exacta del cliente
+     *
+     * @return String con la direccion del cliente
      */
-    public String direccioncompleto(){
-        return localidad + ""+ direccion;
+    public String direccionCompleta(){
+        return localidad +", "+direccion;
     }
+    
+    
+    
 }

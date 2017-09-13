@@ -5,6 +5,8 @@
  */
 package relacionesentreclases;
 
+import java.util.Date;
+
 /**
  *
  * @author estudiante
@@ -15,13 +17,24 @@ public class RelacionesEntreClases {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Cuenta cu = new Cuenta(123455,0.31,null);
-        Cliente cl = new Cliente("keilor","Rivera","cedral","Quesada","hoy");
+       Cuenta cu = new Cuenta(12423423,0.03,null);
+        Cliente cl = new Cliente("Keilor","Rivera","50 mts Sur Iglesia","Cedral",new Date());
+        cu.setTitular(cl);
+        System.out.println(cu.leerTitular().nombreCompleto());
+        
+        Poligono p = new Poligono();
+        p.agregarSegmento(new Segmento(10));
+        p.agregarSegmento(new Segmento(11));
+        p.agregarSegmento(new Segmento(12));
+        System.out.println(p);
         
         
     }
+    
+}
+
+    
 
     
     
-}
+
